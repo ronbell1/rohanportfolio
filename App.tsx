@@ -1,40 +1,38 @@
-
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Experience } from './components/Experience';
-import { Projects } from './components/Projects';
-import { Skills } from './components/Skills';
-import { Achievements } from './components/Achievements';
-import { Contact } from './components/Contact';
-import { PuzzlePieceDivider } from './components/PuzzlePieceDivider';
-import { SketchedPuzzleIcon } from './components/SketchedPuzzleIcon';
+import React from "react";
+import { motion } from "framer-motion";
+import { Navbar } from "./components/Navbar";
+import { Hero } from "./components/Hero";
+import { About } from "./components/About";
+import { Experience } from "./components/Experience";
+import { Projects } from "./components/Projects";
+import { Skills } from "./components/Skills";
+import { Achievements } from "./components/Achievements";
+import { Contact } from "./components/Contact";
+import { PuzzlePieceDivider } from "./components/PuzzlePieceDivider";
+import { SketchedPuzzleIcon } from "./components/SketchedPuzzleIcon";
 
 const App: React.FC = () => {
   const sectionVariant = {
     hidden: { opacity: 0, y: 40 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
-    }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+    },
   };
 
   return (
     <div className="min-h-screen selection:bg-[#1E2BFF] selection:text-white relative">
       <Navbar />
-      
+
       {/* Background Floating Pieces Removed */}
 
-      <main className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-8 sm:py-12">
         <Hero />
-        
-        
-          <PuzzlePieceDivider />
-        <div className="space-y-24 md:space-y-32">
-          <motion.section 
+
+        <PuzzlePieceDivider />
+        <div className="space-y-16 sm:space-y-24 md:space-y-32">
+          <motion.section
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
@@ -44,7 +42,7 @@ const App: React.FC = () => {
             <About />
           </motion.section>
 
-                <motion.section 
+          <motion.section
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
@@ -53,8 +51,8 @@ const App: React.FC = () => {
           >
             <Skills />
           </motion.section>
-          
-          <motion.section 
+
+          <motion.section
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
@@ -64,8 +62,7 @@ const App: React.FC = () => {
             <Achievements />
           </motion.section>
 
-          
-          <motion.section 
+          <motion.section
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
@@ -74,9 +71,8 @@ const App: React.FC = () => {
           >
             <Projects />
           </motion.section>
- 
 
-             <motion.section 
+          <motion.section
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
@@ -87,8 +83,8 @@ const App: React.FC = () => {
           </motion.section>
 
           <PuzzlePieceDivider reversed />
-          
-          <motion.section 
+
+          <motion.section
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
